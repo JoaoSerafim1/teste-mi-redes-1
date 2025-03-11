@@ -13,7 +13,7 @@ while len(msg) <= 0:
     conn, add = socket_receiver.accept()
     msg = conn.recv(64)
 
-print(msg)
+print(msg.decode('UTF-8'))
 
 HOSTNAME2 = socket.gethostbyname('sid2')
 socket_sender.connect((HOSTNAME2, 8002))
